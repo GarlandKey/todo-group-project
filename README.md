@@ -1,46 +1,23 @@
-Project Team: names and jobs go here
+# Honey Due - For when you're busy as a bee
 
-# Introduction
+A simple to-do app that lets you create individual tasks, mark them important as needed, and set the due date for each.
 
-A Simple ToDo App is built using the MVC Architecture, we have also implemented "authorization" so folx can sign up, customize & personalize the app 
+## Team Members and contributions:
 
----
+- Hattie Tavares - Backend: Configured adding a date input to the form so users can set a due date when they create a task. Added Moment to the app to format the date and edited the view to render the date in a readable manner and with the correct date showing.
 
-> Be sure to add that lovely star 😀 and fork it for your own copy
+**Link to project:** Not currently live
 
----
+## How It's Made:
 
-# Objectives
+**Tech used:** HTML, CSS, JavaScript, EJS, Node.js, Express, MongoDB, Passport
 
-- It's a beginner level app created to understand how MVC concept and logins are added
+## Optimizations
 
----
+- Have tasks ordered by importance
+- Add further levels of importance
+- Ability to edit tasks
 
-# Who is this for? 
+## Lessons Learned:
 
-- It's for beginners & intermediates with little more experience, to help understand the various aspects of building a node app with some complex features
-
----
-
-# Packages/Dependencies used 
-
-bcrypt, connect-mongo, dotenv, ejs, express, express-flash, express-session, mongodb, mongoose, morgan, nodemon, passport, passport-local, validator
-
----
-
-# Install all the dependencies or node packages used for development via Terminal
-
-`npm install` 
-
----
-
-# Things to add
-
-- Create a `.env` file and add the following as `key: value` 
-  - PORT: 2121 (can be any port example: 3000) 
-  - DB_STRING: `your database URI` 
- ---
- 
- Have fun testing and improving it! 😎
-
-
+- Hattie - The way Moment handles time can cause it to display the "wrong" date after shifting the time forward or backward. In my case it was displaying the day before the due date even though the correct date was being saved in the database. I had to add .utc to have it use Coordinated Universal Time which fixed the displayed date.
