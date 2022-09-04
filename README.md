@@ -17,6 +17,7 @@ A simple to-do app that lets you create individual tasks, mark them important as
 - Have tasks ordered by importance
 - Add further levels of importance
 - Ability to edit tasks
+- Add subtasks to main tasks
 
 ## Lessons Learned:
 
