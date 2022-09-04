@@ -10,7 +10,7 @@ Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
 })
 
-Array.from(todoItem).forEach((el)=>{
+Array.from(checkBtn).forEach((el)=>{
     el.addEventListener('click', markComplete)
 })
 
@@ -18,7 +18,7 @@ Array.from(todoComplete).forEach((el)=>{
     el.addEventListener('click', markIncomplete)
 })
 
-Array.from(todoImportant).forEach((el)=>{
+Array.from(impBtn).forEach((el)=>{
     el.addEventListener('click', markImportant)
 })
 
