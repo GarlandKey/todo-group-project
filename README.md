@@ -21,3 +21,5 @@ A simple to-do app that lets you create individual tasks, mark them important as
 ## Lessons Learned:
 
 - Hattie - The way Moment handles time can cause it to display the "wrong" date after shifting the time forward or backward. In my case it was displaying the day before the due date even though the correct date was being saved in the database. I had to add .utc to have it use Coordinated Universal Time which fixed the displayed date.
+
+- Garland - Working with ejs isn't too difficult. Smooth sailing on styling as well.
