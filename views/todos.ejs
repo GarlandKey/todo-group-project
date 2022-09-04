@@ -4,47 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HoneyDue - For When You're Busy as a Bee</title>
+    <title>HoneyDue - Tasks</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/74d7432073.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
         <h1>HoneyDue</h1>
-        <a href="/logout">Logout</a>
+        <a href="/logout" class="button pointer">Log Out</a>
     </header>
 
     <main>
         <h2><%= user.userName %>, you have <strong><%= left %></strong> thing(s) left to do.</h2>
-   
-        <section class="taskList">
-            <h3>Tasks</h3>
-            <ul>
-                <li class="todoItem">
-                    <span class="task taskLabel">Task</span>
-                    <span class="dueDate taskLabel">Due Date</span>
-                </li>
-            <% todos.forEach( el => { %>
+
+        <section class="holder">
+            <form action="/todos/createTodo" method='POST'>
+                <h3>Add Task</h3>
+                <label for="description">Task Description</label>
+                <input type="text" id="description" placeholder="Enter task description" name='todoItem'>
+                <label for="dueDate">Due Date</label>
+                <input type="date" id="dueDate" name="dueDate">
+                <label for="section">Important?</label>
+                <section>
+                    <input type="radio" name="yesImp">
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="notImp">
+                    <label for="no">No</label>
+                </section>
+                <input type="submit" class="pointer" value="+ Add">
+            </form>
+
+            <section class="taskList">
+                <h3>Tasks</h3>
+                <ul>
+                    <li class="todoItem">
+                        <span class="task taskLabel">Task</span>
+                        <span class="dueDate taskLabel">Due Date</span>
+                    </li>
+                <% todos.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class="imp pointer fa-solid fa-circle-exclamation"></span>
                         <span class='task <%= el.completed === true ? 'completed' : 'not'%>'><%= el.todo %></span>
                         <span class="dueDate"><%= moment.utc(el.dueDate).format( 'MMMM DD, YYYY') %></span>
-                        <span class='del'><img src="img/delete.webp" alt="delete"></span>
+                        <span class="done pointer fa-solid fa-check"></span>
+                        <span class="del pointer fa-solid fa-trash-can"></span>
                     </li>
-            <% }) %>    
-            </ul>
+                <% }) %>    
+                </ul>
+            </section>
+    
         </section>
-
-        <form action="/todos/createTodo" method='POST'>
-            <h3>Add Task</h3>
-            <label for="description">Task Description</label>
-            <input type="text" id="description" placeholder="Enter task description" name='todoItem'>
-            <label for="dueDate">Due Date</label>
-            <input type="date" id="dueDate" name="dueDate">
-            <input type="submit" value="+ Add">
-        </form>
+        
     </main>
     <footer>
         <small>HoneyDue &copy; 2022 | Created by: <a href="https://github.com/100devs" target="_blank">100Devs</a></small>

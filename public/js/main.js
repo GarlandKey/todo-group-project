@@ -1,8 +1,10 @@
+const impBtn = document.querySelectorAll(".imp")
 const deleteBtn = document.querySelectorAll('.del')
+const checkBtn = document.querySelectorAll(".done")
 const todoItem = document.querySelectorAll('span.not')
 const todoComplete = document.querySelectorAll('span.completed')
-const todoImportant = document.querySelectorAll('span.important')
-const todoNotImportant = document.querySelectorAll('span.notImportant')
+const todoImportant = document.querySelectorAll('.imp')
+const todoNotImportant = document.querySelectorAll('.imp')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
