@@ -165,7 +165,6 @@ strong {
 
 .del > img{
     grid-area: del;
-    justify-self: end;
     width: 1.6rem;
 }
 
