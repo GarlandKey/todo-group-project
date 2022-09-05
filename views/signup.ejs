@@ -13,18 +13,31 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/signup" method="POST">
-        <input type="text" name="userName" placeholder="User Name">
-        <input type="email" name="email" placeholder="Email">
-        <input type="password" name="password" placeholder="Password">
-        <input type="password" name="confirmPassword" placeholder="Confirm Password">
-        <input type="submit">
-    </form>
+
+    <section class="main">
+        <h1 class="text-center">HoneyDue</h1>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <section>
+            <form action="/signup" method="POST" class="authForms">
+                <p>Sign Up:</p>
+                <input type="text" name="userName" placeholder="User Name">
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="password" name="confirmPassword" placeholder="Confirm Password">
+                <input type="submit" class="pointer button">
+            </form>
+        </section>
+
+        <p class="small-xl pt-3 text-center">
+            <span class="text-muted">Already have an account?</span>
+            <a href="/login">Log In</a>
+        </p>
+    
+    </section>
 
     <footer>
         <small>HoneyDue &copy; 2022 | Created by: <a href="https://github.com/100devs" target="_blank">100Devs</a></small>

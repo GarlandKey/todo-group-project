@@ -25,16 +25,9 @@
             <form action="/todos/createTodo" method='POST'>
                 <h3>Add Task</h3>
                 <label for="description">Task Description</label>
-                <input type="text" id="description" placeholder="Enter task description" name='todoItem'>
+                <input type="text" id="description" placeholder="Enter task" name='todoItem'>
                 <label for="dueDate">Due Date</label>
                 <input type="date" id="dueDate" name="dueDate">
-                <label for="section">Important?</label>
-                <section>
-                    <input type="radio" name="yesImp">
-                    <label for="yes">Yes</label>
-                    <input type="radio" name="notImp">
-                    <label for="no">No</label>
-                </section>
                 <input type="submit" class="pointer" value="+ Add">
             </form>
 

@@ -28,38 +28,75 @@ body {
     width: 100vw;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    height: 100vw;
-    width: auto;
-    justify-content: center;
+main {
     align-items: center;
-}
-
-.card {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-flow: column nowrap;
+    height: calc(100vh - 7rem);
     justify-content: space-around;
-    background-color:#043e6c;
-    border-radius: 1.5rem;
-    vertical-align: middle;
-    width: 250px;
-    height: 150px;
-    margin-top: 10px ;
+    min-width: 32rem;
+    width: 40vw;
 }
 
-.pointer {
-    cursor: pointer;
-}
-
-.holder {
+header {
+    align-items: center;
     display: flex;
-    flex-direction: row;
-    width: 90vw;
+    flex-flow: row wrap;
+    font-size: 1.2rem;
+    height: 7rem;
+    justify-content: space-between;
+    padding-right: 2rem;
+    width: 100vw;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
     justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    width: 100vw;
+    height: 10vh;
+    margin-top: 2rem;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+    padding-left: 2rem;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+li {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+small {
+    font-size: 1rem;
+}
+
+strong {
+    color: var(--yellow);
+    font-family: 'Lobster', cursive;
 }
 
 a,
@@ -74,32 +111,22 @@ a:hover {
     text-decoration: underline;
 }
 
-footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    padding: 0.8rem;
-    width: 100vw;
-    height: 10vh;
-}
-
 form {
     align-items: flex-start;
     background-color: var(--background-mid);
-    border-bottom-left-radius: 1.5rem;
-    border-top-left-radius: 1.5rem;
     display: flex;
     flex-flow: column nowrap;
     font-family: 'Poppins', sans-serif;
     gap: 1.5rem;
     padding: 2rem;
-    justify-content: space-between;
     width: 30rem;
-    height: 40rem;
+    height: fit-content;
 }
 
 form > input[type=date],
 form > input[type=text],
+form > input[type=email],
+form > input[type=password],
 form > textarea {
     background-color: var(--background-bright);
     border: 0;
@@ -112,6 +139,8 @@ form > textarea {
 
 form > input[type=date]:focus,
 form > input[type=text]:focus,
+form > input[type=email]:focus,
+form > input[type=password]:focus,
 form > textarea:focus {
     color: var(--white);
     outline: solid var(--yellow) 0.2rem;
@@ -136,6 +165,81 @@ form > label {
     font-size: 1.4rem;
 }
 
+form > p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.main > h1 {
+    margin-bottom: 20px;
+    font-size: 8rem;
+}
+
+.main > h3 {
+    margin-bottom: 10px;
+}
+
+.main > p {
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+
+.main > p > a {
+    text-decoration: underline;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#043e6c;
+    border-radius: 1.5rem;
+    vertical-align: middle;
+    width: 200px;
+    height: 150px;
+    margin-top: 10px ;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.card > p {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.75rem;
+}
+
+.authForms {
+    border-radius: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.holder {
+    display: flex;
+    flex-direction: row;
+    width: 90vw;
+    justify-content: center;
+}
+
+.holder > form {
+    border-top-left-radius: 1.5rem;
+    border-bottom-left-radius: 1.5rem;
+}
+
 ::placeholder {
     color: white;
 }
@@ -147,83 +251,17 @@ form > label {
     border-radius: 1.5rem;
     color: var(--white);
     font-weight: 600;
+    font-size: 1.5rem;
     height: 3rem;
     line-height: 3rem;
     width: 10rem;
+    text-transform: uppercase;
 }
 
 .button:hover {
     text-decoration: none;
     background-color: var(--yellow);
     color: var(--black);
-}
-
-h1 {
-    color: var(--yellow);
-    font-size: 5rem;
-    font-family: 'Lobster', cursive;
-    padding-left: 2rem;
-}
-
-h2 {
-    font-size: 4rem;
-    line-height: 5rem;
-    padding: 2.5rem 1rem;
-    text-align: center;
-}
-
-h3 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-header {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 1.2rem;
-    height: 7rem;
-    justify-content: space-between;
-    padding-right: 2rem;
-    width: 100vw;
-}
-
-footer {
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 2rem;
-}
-
-li {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-}
-
-main {
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
-    height: calc(100vh - 7rem);
-    justify-content: space-around;
-    min-width: 32rem;
-    width: 40vw;
-}
-
-small {
-    font-size: 1rem;
-}
-
-strong {
-    color: var(--yellow);
-    font-family: 'Lobster', cursive;
 }
 
 .completed {
@@ -279,5 +317,5 @@ strong {
 }
 
 .notImp {
-    color: blue;
+    color: black;
 }
