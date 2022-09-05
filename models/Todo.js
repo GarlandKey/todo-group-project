@@ -7,6 +7,7 @@ const TodoSchema = new mongoose.Schema({
   },
   dueDate:{
     type: Date,
+    required: true,
   },
   completed: {
     type: Boolean,

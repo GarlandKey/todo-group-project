@@ -13,30 +13,33 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 class="text-center">HoneyDue</h1>
-    <% if (locals.messages.errors) { %>
-        <% messages.errors.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <% if (locals.messages.info) { %>
-        <% messages.info.forEach( el => { %>
-            <div class="alert alert-danger"><%= el.msg %></div>
-        <% }) %>    
-    <% } %>
-    <form action="/login" method="POST">
-        <span>Log In:</span>
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Email">
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="Password">
-        <input type="submit" class="pointer">
-    </form>
+    <section class="main">
+        <h1 class="text-center">HoneyDue</h1>
+        <% if (locals.messages.errors) { %>
+            <% messages.errors.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <% if (locals.messages.info) { %>
+            <% messages.info.forEach( el => { %>
+                <div class="alert alert-danger"><%= el.msg %></div>
+            <% }) %>    
+        <% } %>
+        <section>
+            <form action="/login" method="POST" class="authForms">
+                <p>Log In:</p>
+                <input type="email" name="email" placeholder="Email">
+                <input type="password" name="password" placeholder="Password">
+                <input type="submit" class="pointer button">
+            </form>
+        </section>
 
-    <p class="small-xl pt-3 text-center">
-        <span class="text-muted">Not a member?</span>
-        <a href="/signup">Sign up</a>
-    </p>
+        <p class="small-xl pt-3 text-center">
+            <span class="text-muted">Not a member?</span>
+            <a href="/signup">Sign up</a>
+        </p>
+
+    </section>
 
     <footer>
         <small>HoneyDue &copy; 2022 | Created by: <a href="https://github.com/100devs" target="_blank">100Devs</a></small>
