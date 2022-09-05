@@ -14,7 +14,7 @@ const TodoSchema = new mongoose.Schema({
   },
   important: {
     type: Boolean,
-    default: false
+    default: true
   },
   userId: {
     type: String,

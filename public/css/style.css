@@ -274,6 +274,10 @@ strong {
     color: darkred;
 }
 
-.important {
+.imp {
     color: darkred;
+}
+
+.notImp {
+    color: blue;
 }

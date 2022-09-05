@@ -3,8 +3,8 @@ const deleteBtn = document.querySelectorAll('.del')
 const checkBtn = document.querySelectorAll(".done")
 const todoItem = document.querySelectorAll('span.not')
 const todoComplete = document.querySelectorAll('span.completed')
-const todoImportant = document.querySelectorAll('.imp')
 const todoNotImportant = document.querySelectorAll('.imp')
+const todoImportant = document.querySelectorAll('.notImp')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)
@@ -24,6 +24,10 @@ Array.from(impBtn).forEach((el)=>{
 
 Array.from(todoNotImportant).forEach((el)=>{
     el.addEventListener('click', markNotImportant)
+})
+
+Array.from(todoImportant).forEach((el)=>{
+    el.addEventListener('click', markImportant)
 })
 
 async function deleteTodo(){
@@ -80,10 +84,11 @@ async function markIncomplete(){
     }
 }
 
-async function markImportant(){
+async function markNotImportant(){
+
     const todoId = this.parentNode.dataset.id
     try{
-        const response = await fetch('todos/markImportant', {
+        const response = await fetch('todos/markNotImportant', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -98,10 +103,10 @@ async function markImportant(){
     }
 }
 
-async function markNotImportant(){
+async function markImportant(){
     const todoId = this.parentNode.dataset.id
     try{
-        const response = await fetch('todos/markNotImportant', {
+        const response = await fetch('todos/markImportant', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({

@@ -43,24 +43,24 @@ module.exports = {
             console.log(err)
         }
     },
-     markImportant: async (req, res)=>{
-        try{
-            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
-                important: true
-            })
-            console.log('Marked important')
-            res.json('Marked important')
-        }catch(err){
-            console.log(err)
-        }
-    },
-    markNotImportant: async (req, res)=>{
+     markNotImportant: async (req, res)=>{
         try{
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 important: false
             })
             console.log('Marked not important')
             res.json('Marked not important')
+        }catch(err){
+            console.log(err)
+        }
+    },
+    markImportant: async (req, res)=>{
+        try{
+            await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
+                important: true
+            })
+            console.log('Marked important')
+            res.json('Marked important')
         }catch(err){
             console.log(err)
         }
