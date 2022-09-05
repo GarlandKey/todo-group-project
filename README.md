@@ -4,9 +4,13 @@ A simple to-do app that lets you create individual tasks, mark them important as
 
 ## Team Members and contributions:
 
+- Garland - Frontend: Setting up base CSS styles for the app including setting colors and fonts as branding, and styling of the todos page
+
 - Hattie Tavares - Backend: Configured adding a date input to the form so users can set a due date when they create a task. Added Moment to the app to format the date and edited the view to render the date in a readable manner and with the correct date showing.
 
-**Link to project:** Not currently live
+- Kylla - Frontend: CSS Styling of the login page
+
+- Tessy Okoloani - Backend: Set new routes and controllers, and added to the schema for code additions such as adding Due Dates, and marking tasks important.
 
 ## How It's Made:
 
