@@ -47,7 +47,7 @@
                     </li>
                 <% todos.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
-                        <span class="pointer fa-solid fa-circle-exclamation <%= el.important === true ? 'important' : 'not'%>"></span>
+                        <span class="pointer fa-solid fa-circle-exclamation <%= el.important === false ? 'notImp' : 'imp'%>"></span>
                         <span class="task <%= el.completed === true ? 'completed' : 'not'%>"><%= el.todo %></span>
                         <span class="dueDate"><%= moment.utc(el.dueDate).format( 'MMMM DD, YYYY') %></span>
                         <span class="done pointer fa-solid fa-check"></span>

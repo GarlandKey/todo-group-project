@@ -48,8 +48,8 @@ module.exports = {
             await Todo.findOneAndUpdate({_id:req.body.todoIdFromJSFile},{
                 important: true
             })
-            console.log('Marked important')
-            res.json('Marked important')
+            console.log('Marked not important')
+            res.json('Marked not important')
         }catch(err){
             console.log(err)
         }
