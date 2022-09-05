@@ -26,6 +26,10 @@ Array.from(todoNotImportant).forEach((el)=>{
     el.addEventListener('click', markNotImportant)
 })
 
+Array.from(todoImportant).forEach((el)=>{
+    el.addEventListener('click', markImportant)
+})
+
 async function deleteTodo(){
     const todoId = this.parentNode.dataset.id
     try{
@@ -80,11 +84,11 @@ async function markIncomplete(){
     }
 }
 
-async function markImportant(){
+async function markNotImportant(){
 
     const todoId = this.parentNode.dataset.id
     try{
-        const response = await fetch('todos/markImportant', {
+        const response = await fetch('todos/markNotImportant', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
@@ -99,10 +103,10 @@ async function markImportant(){
     }
 }
 
-async function markNotImportant(){
+async function markImportant(){
     const todoId = this.parentNode.dataset.id
     try{
-        const response = await fetch('todos/markNotImportant', {
+        const response = await fetch('todos/markImportant', {
             method: 'put',
             headers: {'Content-type': 'application/json'},
             body: JSON.stringify({
