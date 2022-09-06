@@ -6,7 +6,7 @@ https://honeydue-100devs.herokuapp.com/
 
 ## Team Members and contributions:
 
-- Dan - Set up and maintained repository
+- Dan - Set up and maintained repository, deployment to Heroku
 
 - Garland - Frontend: Setting up base CSS styles for the app including setting app colors and choosing fonts, and styling of the todos page
 
@@ -34,3 +34,5 @@ https://honeydue-100devs.herokuapp.com/
 - Garland - Working with ejs isn't too difficult. Smooth sailing on styling as well.
 
 - Tessy - Debugging works only when you don't beat yourself up. Always remember to use the console in the browser when testing your code.
+
+- Dan - Reviewing code helps with learning it
