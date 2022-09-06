@@ -3,8 +3,8 @@ const deleteBtn = document.querySelectorAll('.del')
 const checkBtn = document.querySelectorAll(".done")
 const todoItem = document.querySelectorAll('span.not')
 const todoComplete = document.querySelectorAll('span.completed')
-const todoNotImportant = document.querySelectorAll('.imp')
-const todoImportant = document.querySelectorAll('.notImp')
+const todoNotImportant = document.querySelectorAll('.urgentTrue')
+const todoImportant = document.querySelectorAll('.urgentFalse')
 
 Array.from(deleteBtn).forEach((el)=>{
     el.addEventListener('click', deleteTodo)

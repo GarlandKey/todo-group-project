@@ -329,13 +329,14 @@ strong {
     color: rgb(240, 91, 6);
 }
 
-.imp {
+/* .urgentTrue {
     color: rgb(240, 91, 6);
 }
 
-.notImp {
+.urgentFalse {
     color: black;
-=======
+} */
+
 .urgentFalse {
     color: black;
 }
