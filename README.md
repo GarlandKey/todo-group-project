@@ -31,4 +31,4 @@ A simple to-do app that lets you create individual tasks, mark them important as
 
 - Garland - Working with ejs isn't too difficult. Smooth sailing on styling as well.
 
--Tessy - Debugging works only when you don't beat yourself up. Always remember to use the console in the browser when testing your code.
+- Tessy - Debugging works only when you don't beat yourself up. Always remember to use the console in the browser when testing your code.
