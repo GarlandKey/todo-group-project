@@ -8,7 +8,7 @@ https://honeydue-100devs.herokuapp.com/
 
 - Dan - Set up and maintained repository, deployment to Heroku
 
-- Eri H. - CSS
+- Eri H. - Frontend: CSS color style for app todo page. Backend: Added additional imput to the todoItem and username.
 
 - Garland - Frontend: Setting up base CSS styles for the app including setting app colors and choosing fonts, and styling of the todos page
 
