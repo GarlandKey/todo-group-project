@@ -25,7 +25,7 @@
             <form action="/todos/createTodo" method='POST'>
                 <h3>Add Task</h3>
                 <label for="description">Task Description</label>
-                <input type="text" id="description" placeholder="Enter task" name='todoItem'>
+                <input type="text" maxlength="50" id="description" placeholder="Enter task" name='todoItem'>
                 <label for="dueDate">Due Date</label>
                 <input type="date" id="dueDate" name="dueDate">
                 <input type="submit" class="pointer" value="+ Add">
