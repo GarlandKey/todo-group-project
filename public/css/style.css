@@ -28,77 +28,6 @@ body {
     width: 100vw;
 }
 
-main {
-    align-items: center;
-    display: flex;
-    flex-flow: column nowrap;
-    height: calc(100vh - 7rem);
-    justify-content: space-around;
-    min-width: 32rem;
-    width: 40vw;
-}
-
-header {
-    align-items: center;
-    display: flex;
-    flex-flow: row wrap;
-    font-size: 1.2rem;
-    height: 7rem;
-    justify-content: space-between;
-    padding-right: 2rem;
-    width: 100vw;
-}
-
-footer {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 0.8rem;
-    width: 100vw;
-    height: 10vh;
-    margin-top: 2rem;
-}
-
-h1 {
-    color: var(--yellow);
-    font-size: 5rem;
-    font-family: 'Lobster', cursive;
-    padding-left: 2rem;
-}
-
-h2 {
-    font-size: 4rem;
-    line-height: 5rem;
-    padding: 2.5rem 1rem;
-    text-align: center;
-}
-
-h3 {
-    font-size: 3rem;
-    font-weight: 600;
-}
-
-li {
-    align-items: center;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-evenly;
-}
-
-p {
-    font-family: 'Poppins', sans-serif;
-}
-
-small {
-    font-size: 1rem;
-}
-
-strong {
-    color: var(--yellow);
-    font-family: 'Lobster', cursive;
-}
-
 a,
 a:active,
 a:link,
@@ -174,6 +103,76 @@ form::placeholder {
     color: var(--white)
 }
 
+header {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 1.2rem;
+    height: 7rem;
+    justify-content: space-between;
+    padding-right: 2rem;
+    width: 100vw;
+}
+
+footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    width: 100vw;
+    height: 2.6rem;
+}
+
+h1 {
+    color: var(--yellow);
+    font-size: 5rem;
+    font-family: 'Lobster', cursive;
+    padding-left: 2rem;
+}
+
+h2 {
+    font-size: 4rem;
+    line-height: 5rem;
+    padding: 2.5rem 1rem;
+    text-align: center;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+li {
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+}
+
+main {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: calc(100vh - 3.8rem);
+    justify-content: space-around;
+    min-width: 32rem;
+    width: 65vw;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+}
+
+small {
+    font-size: 1rem;
+}
+
+strong {
+    color: var(--yellow);
+    font-family: 'Lobster', cursive;
+}
+
 .authForms {
     border-radius: 1.5rem;
     margin-bottom: 10px;
@@ -224,6 +223,16 @@ form::placeholder {
     text-decoration: line-through;
 }
 
+.del {
+    grid-area: del;
+    justify-self: end;
+}
+
+.done {
+    grid-area: done;
+    justify-self: end;
+}
+
 .dueDate {
     grid-area: dueDate;
 }
@@ -242,8 +251,6 @@ form::placeholder {
     flex-direction: column;
     justify-content: center;
     min-height: 100vh;
-    min-width: 34rem;
-    width: auto;
 }
 
 .main > h1 {
@@ -281,6 +288,7 @@ form::placeholder {
     background-color: var(--yellow);
     color: var(--black);
     padding: 2rem;
+    min-width: 34rem;
 }
 
 .taskList h3 {
@@ -298,23 +306,28 @@ form::placeholder {
 
 .taskListContainer > form {
     height: 100%;
+    min-width: 34rem;
 }
 
 .todoItem {
     display: grid;
     font-size: 1.6rem;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
     grid-template-rows: 1fr; 
-    gap: 1rem; 
+    gap: 0.5rem; 
     grid-template-areas: 
-      "imp task task task dueDate dueDate done del";
+      "urgentElement task task task dueDate dueDate dueDate done del";
     padding: 1rem 0;
 }
 
-.imp {
-    color: darkred;
+.urgentElement {
+    grid-area: urgentElement;
 }
 
-.notImp {
+.urgentFalse {
     color: black;
+}
+
+.urgentTrue {
+    color: darkred;
 }
