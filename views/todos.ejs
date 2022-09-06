@@ -25,7 +25,7 @@
             <form action="/todos/createTodo" method='POST'>
                 <h3>Add Task</h3>
                 <label for="description">Task Description</label>
-                <input type="text" id="description" placeholder="Enter task" name='todoItem'>
+                <input type="text" maxlength="50" id="description" placeholder="Enter task" name='todoItem'>
                 <label for="dueDate">Due Date</label>
                 <input type="date" id="dueDate" name="dueDate">
                 <input type="submit" class="pointer" value="+ Add">
@@ -40,6 +40,7 @@
                     </li>
                 <% todos.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
+                        <span class="pointer fa-solid fa-circle-asterisk <%= el.important === false ? 'notImp' : 'imp'%>"></span>
                         <span class="urgentElement pointer fa-solid fa-circle-exclamation <%= el.important === false ? 'urgentFalse' : 'urgentTrue'%>"></span>
                         <span class="task <%= el.completed === true ? 'completed' : 'not'%>"><%= el.todo %></span>
                         <span class="dueDate"><%= moment.utc(el.dueDate).format( 'MMMM DD, YYYY') %></span>

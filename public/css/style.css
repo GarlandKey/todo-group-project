@@ -324,6 +324,18 @@ strong {
     grid-area: urgentElement;
 }
 
+
+.fa-trash-can:hover {
+    color: rgb(240, 91, 6);
+}
+
+.imp {
+    color: rgb(240, 91, 6);
+}
+
+.notImp {
+    color: black;
+=======
 .urgentFalse {
     color: black;
 }
