@@ -309,11 +309,11 @@ form > p {
 }
 
 .fa-trash-can:hover {
-    color: darkred;
+    color: rgb(240, 91, 6);
 }
 
 .imp {
-    color: darkred;
+    color: rgb(240, 91, 6);
 }
 
 .notImp {

@@ -6,6 +6,8 @@ A simple to-do app that lets you create individual tasks, mark them important as
 
 - Dan - Set up and maintained repository
 
+- Eri H. - CSS
+
 - Garland - Frontend: Setting up base CSS styles for the app including setting app colors and choosing fonts, and styling of the todos page
 
 - Hattie Tavares - Backend: Configured adding a date input to the form so users can set a due date when they create a task. Added Moment to the app to format the date and edited the view to render the date in a readable manner and with the correct date showing. Frontend: Color palette, CSS styling on pages
