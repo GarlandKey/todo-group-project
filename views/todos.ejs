@@ -21,7 +21,7 @@
     <main>
         <h2><%= user.userName %>, you have <strong><%= left %></strong> thing(s) left to do.</h2>
 
-        <section class="holder">
+        <section class="taskListContainer">
             <form action="/todos/createTodo" method='POST'>
                 <h3>Add Task</h3>
                 <label for="description">Task Description</label>
@@ -41,6 +41,7 @@
                 <% todos.forEach( el => { %>
                     <li class='todoItem' data-id='<%=el._id%>'>
                         <span class="pointer fa-solid fa-circle-asterisk <%= el.important === false ? 'notImp' : 'imp'%>"></span>
+                        <span class="urgentElement pointer fa-solid fa-circle-exclamation <%= el.important === false ? 'urgentFalse' : 'urgentTrue'%>"></span>
                         <span class="task <%= el.completed === true ? 'completed' : 'not'%>"><%= el.todo %></span>
                         <span class="dueDate"><%= moment.utc(el.dueDate).format( 'MMMM DD, YYYY') %></span>
                         <span class="done pointer fa-solid fa-check"></span>

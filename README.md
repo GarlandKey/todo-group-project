@@ -2,9 +2,11 @@
 
 A simple to-do app that lets you create individual tasks, mark them important as needed, and set the due date for each.
 
+https://honeydue-100devs.herokuapp.com/
+
 ## Team Members and contributions:
 
-- Dan - Set up and maintained repository
+- Dan - Set up and maintained repository, deployment to Heroku
 
 - Eri H. - CSS
 
@@ -14,11 +16,11 @@ A simple to-do app that lets you create individual tasks, mark them important as
 
 - Kylla - Frontend: CSS Styling of the login page, Named app
 
-- Tessy Okoloani - Backend: Set new routes and controllers, and added to the schema for code additions such as adding Due Dates, and marking tasks important.
+- Tessy Okoloani - Backend: Set new routes and controllers to mark tasks as either "Important" or "Not important". Added the Date and Importance boolean to the schema. Added the event listeners and functions for code additions such as adding Due Dates, and marking tasks important to the front-end javaScript. Worked on harmonizing the front-end to work with the back-end
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, EJS, Node.js, Express, MongoDB, Passport
+**Tech used:** HTML, CSS, JavaScript, EJS, Node.js, Express, MongoDB, Passport, Bcrypt, Moment
 
 ## Optimizations
 
@@ -32,3 +34,7 @@ A simple to-do app that lets you create individual tasks, mark them important as
 - Hattie - The way Moment handles time can cause it to display the "wrong" date after shifting the time forward or backward. In my case it was displaying the day before the due date even though the correct date was being saved in the database. I had to add .utc to have it use Coordinated Universal Time which fixed the displayed date.
 
 - Garland - Working with ejs isn't too difficult. Smooth sailing on styling as well.
+
+- Tessy - Debugging works only when you don't beat yourself up. Always remember to use the console in the browser when testing your code.
+
+- Dan - Reviewing code helps with learning it
